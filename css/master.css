@@ -1,0 +1,319 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: shabnam;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+    font-family: shabnam;
+}
+
+input {
+    font-family: shabnam;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+@font-face {
+    font-family: 'shabnam';
+    src: url('Fonts/shabnam.eot');
+    src: url('Fonts/shabnam.eot#iefix') format('embedded-opentype'), url('Fonts/shabnam.woff') format('woff'), url('Fonts/shabnam.ttf') format('truetype'), url('Fonts/Vshabnam.svg#CartoGothicStdBook') format('svg');
+}
+
+*,
+:before,
+:after {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.master-body {
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.background-body {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 0;
+    filter: brightness(70%)
+}
+
+.login-user {
+    z-index: 10;
+    position: relative;
+    top: -10%;
+}
+
+.avatar-uesr {
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    overflow: hidden;
+    margin: auto;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(156, 153, 153, 0.34);
+}
+
+.avatar-uesr img {
+    width: 60%;
+    height: auto;
+}
+
+.input {
+    border: 3px solid rgba(255, 255, 255, .5);
+    margin-bottom: 10px;
+    width: 270px
+}
+
+.input input {
+    padding: 3px 5px;
+    border: none;
+    height: 35px;
+}
+
+.user-input input {
+    width: 100%;
+}
+.pass-input input{
+  width: 225px;
+}
+.pass-input,
+.user-input {
+    background: rgba(195, 189, 189, 0.3);
+}
+
+.pass-input button {
+    background: transparent;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    height: 27px
+}
+
+.user-input input:hover,
+.pass-input input:hover {
+    outline: none !important;
+}
+
+.login-box{
+  /*-webkit-transition: all .8s ease 0.02s;
+  -moz-transition: all .8s ease 0.04s;
+  -o-transition: all .8s ease 0.04s;*/
+  transition: all .8s;
+  transform: scale(.8);
+  opacity: 0;
+  visibility: hidden;
+  position: relative;
+  top: -10%;
+}
+/*  login Screen  */
+.screen-login {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 20;
+    /*background: rgba(255, 0, 0, 0.5);*/
+}
+.show-login{
+  transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+.data-lock{
+  display: flex;
+  flex-direction: column-reverse;
+  text-align: right;
+}
+.time-date{
+  margin-right: 3em;
+  margin-bottom: 10em;
+  color: #fff;
+
+}
+#displayTime {
+    font-size: 6em;
+    text-shadow: 0 0 28px #8e8d8d
+}
+#dispalyDate {
+    font-size: 2em;
+    text-shadow: 0 0 28px #8e8d8d
+}
+.st0 {
+    opacity: 0;
+}
+
+.st1 {
+    clip-path: url(#SVGID_4_);
+}
+
+.st2 {
+    clip-path: url(#SVGID_10_);
+    fill: #fff;
+}
+
+.st3 {
+    fill: #fff;
+}
+
+.st4 {
+    clip-path: url(#SVGID_16_);
+}
+
+.st5 {
+    clip-path: url(#SVGID_22_);
+    fill: #fff;
+}
+
+.st6 {
+    fill: #fff;
+}
+.logo-sepidz{
+    width:200px;
+    position: absolute;
+    top: 60px;
+    left:0;
+    right:0;
+    margin:auto
+}

@@ -1,107 +1,81 @@
-﻿<!DOCTYPE html>
+﻿﻿<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/master.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
+    <title>Windows 10 Login</title>
 </head>
 
 <body>
-
-
-
-
-
-
-    <div class="master-body" style="background:url('img/wall-1.png'); background-size:cover; background-position: center;">
-
-        <div class="logo-sepidz">
-
-
-
-
-
-        </div>
-
-
-
+    <div class="master-body" style="background:url('http://mehdiardakani.ir/wall-1.png'); background-size:cover; background-position: center;">
 
         <div class="login-box">
             <form action="" method="get" class="login-user">
                 <div class="avatar-uesr">
-                    <img src="img/login.png" alt="">
+                    <img src="http://mehdiardakani.ir/login.png" alt="">
                 </div>
                 <div class="user-input input">
-                    <input class="timeout" type="text" placeholder="نام کاربری">
+                    <input class="timeout" type="text" placeholder="Username">
                 </div>
                 <div class="pass-input input">
-                    <input type="password" placeholder="رمز عبور">
+                    <input type="password" placeholder="Password">
                     <button><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
                 </div>
             </form>
         </div>
         <div class="screen-login data-lock" id="data-lock">
-          <div class="time-date">
-            <div id="displayTime"></div>
-            <div id="dispalyDate">
+            <div class="time-date">
+                <div id="displayTime"></div>
+                <div id="dispalyDate">
 
+                </div>
             </div>
-          </div>
         </div>
     </div>
-
-
-
-
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/jquery-ui-git.js"></script>
     <script src="https://momentjs.com/downloads/moment-with-locales.js" charset="utf-8"></script>
     <script src="js/moment-jalaali.js"></script>
-    <script src="js/master.js"></script>
     <script type="text/javascript">
-      var NowMoment = moment();
-      var eDisplayMoment = document.getElementById('displayTime');
-      eDisplayMoment.innerHTML = NowMoment.format("HH:mm");
+        var NowMoment = moment();
+        var eDisplayMoment = document.getElementById('displayTime');
+        eDisplayMoment.innerHTML = NowMoment.format("HH:mm");
     </script>
     <script>
-      moment.updateLocale('fa', {
-        weekdaysMin : ["یک شنبه", "دو شنبه", "سه شنبه", "چهار شنبه", "پنج شنبه", "جمعه", "شنبه"]
-      });
-      var DateMoment = moment();
-      var dDisplayMoment = document.getElementById('dispalyDate');
-      dDisplayMoment.innerHTML = DateMoment.format('dd jYYYY/jM/jD')
+        var DateMoment = moment();
+        var dDisplayMoment = document.getElementById('dispalyDate');
+        dDisplayMoment.innerHTML = DateMoment.format('dd YYYY/M/D')
     </script>
     <script type="text/javascript">
-      $(document).ready(function () {
+        $(document).ready(function () {
             $("#data-lock").click(function () {
-                $(this).animate({bottom: '100vh'},
-              function () {
-                $(".login-box").addClass("show-login");
-            });
-          });
-          var timeout = setTimeout(function() {
-            $("#data-lock").animate({bottom: '0'},500,
-                function () {
-                    $(".login-box").removeClass("show-login");
-                  });
-          },30000);
-          $("input").focus(function() {
-             clearTimeout(timeout);
-          });
-          $("input").focusout(function() {
-            setTimeout(function() {
-              $("#data-lock").animate({bottom: '0'},1000,
-                  function () {
-                      $(".login-box").removeClass("show-login");
+                $(this).animate({ bottom: '100vh' },
+                    function () {
+                        $(".login-box").addClass("show-login");
                     });
-            },30000)
-          });
-      });
+            });
+            var timeout = setTimeout(function () {
+                $("#data-lock").animate({ bottom: '0' }, 500,
+                    function () {
+                        $(".login-box").removeClass("show-login");
+                    });
+            }, 30000);
+            $("input").focus(function () {
+                clearTimeout(timeout);
+            });
+            $("input").focusout(function () {
+                setTimeout(function () {
+                    $("#data-lock").animate({ bottom: '0' }, 1000,
+                        function () {
+                            $(".login-box").removeClass("show-login");
+                        });
+                }, 30000)
+            });
+        });
     </script>
 
 </body>
